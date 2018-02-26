@@ -44,7 +44,8 @@ new_student # return the newly created instance
        FROM students
        WHERE grade = 9
      SQL
-
+     DB[:conn].execute(sql, name).map do |row|
+       self.new_from_db(row)
   end
 
   def save
