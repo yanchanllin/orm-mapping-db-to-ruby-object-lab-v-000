@@ -36,7 +36,7 @@ new_student # return the newly created instance
        self.new_from_db(row)
      end.first
   end
-end
+
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
