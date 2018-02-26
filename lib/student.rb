@@ -40,13 +40,11 @@ new_student # return the newly created instance
 
   def self.count_all_students_in_grade_9
     sql = <<-SQL
-       SELECT count(*)
+       SELECT count(name)
        FROM students
        WHERE grade = 9
      SQL
-     DB[:conn].execute(sql, name).map do |row|
-       self.new_from_db(row)
-     end.first
+
   end
 
   def save
