@@ -63,3 +63,4 @@ new_student # return the newly created instance
     DB[:conn].execute(sql)
   end
 end
+end 
